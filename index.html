@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS stylesheet -->
+    <title>FFXV Countdown</title>
+    <link rel="stylesheet" href='css/main.css' media='screen'>
+</head>
+
+<body ng-app="AppModule">
+    <div id="picture">
+        <img src="img/logo.png" alt="FFXV logo">
+    </div>
+
+    <div id="quote">
+        <p><i>"There's nothing good or bad, but thinking <br>makes it so."</i> -Shakespeare</p>
+    </div>
+
+    <div id="clockdiv" ng-controller='TimeController'>
+        <div>
+            <span class="days"> {{countDown.days}} </span>
+            <p class="small">Days</p>
+        </div>
+        <div>
+            <span class="hours"> {{countDown.hours}} </span>
+            <p class="small">Hours</p>
+        </div>
+        <div>
+            <span class="minutes"> {{countDown.minutes}} </span>
+            <p class="small">Min.</p>
+        </div>
+        <div>
+            <span class="seconds"> {{countDown.seconds}} </span>
+            <p class="small">Sec.</p>
+        </div>
+    </div>
+
+    <script src="js//angular/angular.min.js"></script>
+    <script src="js/howler/dist/howler.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

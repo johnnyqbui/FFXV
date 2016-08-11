@@ -1,0 +1,129 @@
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+#clockdiv div:nth-child(1) {
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -o-animation-duration: 4s;
+  animation-duration: 4s; }
+
+#clockdiv div:nth-child(2) {
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 8s;
+  -moz-animation-duration: 8s;
+  -o-animation-duration: 8s;
+  animation-duration: 8s; }
+
+#clockdiv div:nth-child(3) {
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 12s;
+  -moz-animation-duration: 12s;
+  -o-animation-duration: 12s;
+  animation-duration: 12s; }
+
+#clockdiv div:nth-child(4) {
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 16s;
+  -moz-animation-duration: 16s;
+  -o-animation-duration: 16s;
+  animation-duration: 16s; }
+
+body {
+  background: #fff;
+  overflow: hidden;
+  font-family: calibri, sans-serif; }
+
+#picture img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 8s;
+  -moz-animation-duration: 8s;
+  -o-animation-duration: 8s;
+  animation-duration: 8s; }
+
+#quote {
+  top: 68%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  -webkit-animation-name: fadein;
+  -moz-animation-name: fadein;
+  -o-animation-name: fadein;
+  animation-name: fadein;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  animation-duration: 3s;
+  color: #9E9E9E;
+  white-space: nowrap;
+  font-size: 21px; }
+
+#clockdiv {
+  top: 80%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  color: #8E8E8E;
+  font-size: 30px;
+  text-align: center;
+  width: 100%; }
+  #clockdiv div {
+    background: rgba(170, 170, 170, 0.2);
+    margin: 10px;
+    padding: 5px 70px 10px 70px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); }
+
+.small {
+  font-size: 0.5em;
+  margin: 0; }

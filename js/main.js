@@ -1,8 +1,40 @@
-(function() {
-	"use strict"
+(function(){
+    'use strict'
 
-    var currentTrack = ""
+    var MainModule = angular.module('AppModule', []);
 
+    // Countdown Timer
+    MainModule.controller('TimeController', function($scope, $interval) {
+        var deadline = 'September 30 2016';
+        var t,
+            interval;
+
+        function updateClock() {
+            t = Date.parse(deadline) - Date.parse(new Date());
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+            $scope.countDown = {
+                seconds: Math.floor((t / second) % 60),
+                minutes: Math.floor((t / minute) % 60),
+                hours: Math.floor((t / hour) % 24),
+                days: Math.floor(t / day)
+            }
+        }
+
+        interval = $interval(function() {
+            updateClock();
+            if (t === 0) {
+                $interval.cancel(interval);
+            }
+        }, 1000)
+
+        updateClock();
+
+    });
+
+    // Music
     var music = new Howl({
         src: ['mp3/somnus.mp3']
     });
@@ -10,47 +42,4 @@
     music.once('load', function() {
         music.play();
     });
-
-    var deadline = 'September 30 2016';
-
-    function getTimeRemaining(endtime) {
-        var t = Date.parse(endtime) - Date.parse(new Date());
-        var seconds = Math.floor((t / 1000) % 60);
-        var minutes = Math.floor((t / 1000 / 60) % 60);
-        var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-        var days = Math.floor(t / (1000 * 60 * 60 * 24));
-
-        return {
-            'total': t,
-            'days': days,
-            'hours': hours,
-            'minutes': minutes,
-            'seconds': seconds
-        };
-    }
-
-    function initializeClock(id, endtime) {
-        var clock = document.getElementById(id);
-        var daysSpan = clock.querySelector('.days');
-        var hoursSpan = clock.querySelector('.hours');
-        var minutesSpan = clock.querySelector('.minutes');
-        var secondsSpan = clock.querySelector('.seconds');
-
-        function updateClock() {
-            var t = getTimeRemaining(endtime);
-            daysSpan.innerHTML = ('0' + t.days).slice(-2);
-            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-            if (t.total <= 0) {
-                clearInterval(timeinterval);
-            }
-        }
-
-        updateClock(); // run function once at first to avoid delay
-        var timeinterval = setInterval(updateClock, 1000);
-
-    }
-
-    initializeClock('clockdiv', deadline);
 })();
