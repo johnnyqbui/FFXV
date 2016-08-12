@@ -1,96 +1,100 @@
 // SASS Mixins
 @mixin position($top-percent, $left-percent, $position) {
-	top: $top-percent;
-	left: $left-percent;
-	position: $position;
+    top: $top-percent;
+    left: $left-percent;
+    position: $position;
 }
 
 @mixin translate($top-percent, $left-percent) {
-	-webkit-transform: translate($top-percent, $left-percent);
-	-moz-transform: translate($top-percent, $left-percent);
-	-o-transform: translate($top-percent, $left-percent);
-	transform: translate($top-percent, $left-percent);
+    -webkit-transform: translate($top-percent, $left-percent);
+    -moz-transform: translate($top-percent, $left-percent);
+    -o-transform: translate($top-percent, $left-percent);
+    transform: translate($top-percent, $left-percent);
 }
 
 @mixin animate($name, $duration) {
-	-webkit-animation-name: $name;
-	   -moz-animation-name: $name;
-	     -o-animation-name: $name;
-	        animation-name: $name;
+    -webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -o-animation-name: $name;
+    animation-name: $name;
 
-	-webkit-animation-duration: $duration;
-	   -moz-animation-duration: $duration;
-	     -o-animation-duration: $duration;
-		    animation-duration: $duration;
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
 }
 
 @mixin keyframes($animationName) {
-  @-webkit-keyframes #{$animationName} {
-    @content;
-  }
-  @-moz-keyframes #{$animationName} {
-    @content;
-  }
-  @-o-keyframes #{$animationName} {
-    @content;
-  }
-  @keyframes #{$animationName} {
-    @content;
-  }
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
 }
 
 // Sass to create fade
 @include keyframes(fadein) {
-	from { opacity: 0 }
-	to { opacity: 1 }
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
 }
 
 // Interate through each div to fade in one by one
 @for $i from 1 through 4 {
-  #clockdiv div:nth-child(#{$i}) {
-  	@include animate(fadein, $i*4s)
-  }
+    #clockdiv div:nth-child(#{$i}) {
+        @include animate(fadein, ($i*5s))
+    }
 }
 
 body {
-	background: #fff;
-	overflow: hidden;
-	font-family: calibri, sans-serif;
+    background: #fff;
+    overflow: hidden;
+    font-family: calibri, sans-serif;
 }
 
 #picture img {
-	@include position(50%, 50%, absolute);
+    @include position(50%, 50%, absolute);
     @include translate(-50%, -50%);
     @include animate(fadein, 8s);
 }
 
 #quote {
-	@include position(68%, 50%, absolute);
-	@include translate(-50%, 0);
-	@include animate(fadein, 3s);
-	color: #9E9E9E;
-	white-space: nowrap;
-	font-size: 21px;
+    @include position(68%, 50%, absolute);
+    @include translate(-50%, 0);
+    @include animate(fadein, 3s);
+    color: #9E9E9E;
+    white-space: nowrap;
+    font-size: 21px;
 }
 
 #clockdiv {
-	@include position(80%, 50%, absolute);
-	@include translate(-50%, 0);
-	color: #8E8E8E;
-	font-size: 30px;
+    @include position(80%, 50%, absolute);
+    @include translate(-50%, 0);
+    color: #8E8E8E;
+    font-size: 30px;
     text-align: center;
     width: 100%;
     div {
-    	background: rgba(170,170,170, 0.2);
-    	margin: 10px;
-	    padding: 5px 70px 10px 70px;
-		display: inline-block;
-		border-radius: 5px;
-		box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+        background: rgba(170, 170, 170, 0.2);
+        margin: 10px;
+        padding: 5px 70px 10px 70px;
+        display: inline-block;
+        border-radius: 5px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
     }
 }
 
 .small {
-	font-size: 0.5em;
-	margin: 0;
+    font-size: 0.5em;
+    margin: 0;
 }
