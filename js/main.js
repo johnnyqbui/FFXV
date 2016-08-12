@@ -1,6 +1,14 @@
 (function(){
     'use strict'
 
+    // Music
+    var music = new Howl({
+        src: ['mp3/somnus.mp3'],
+        loop: true
+    });
+
+    music.play();
+
     var MainModule = angular.module('AppModule', []);
 
     // Countdown Timer
@@ -32,14 +40,5 @@
 
         updateClock();
 
-    });
-
-    // Music
-    var music = new Howl({
-        src: ['mp3/somnus.mp3']
-    });
-
-    music.once('load', function() {
-        music.play();
     });
 })();

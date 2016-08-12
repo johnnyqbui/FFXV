@@ -12,7 +12,7 @@
     transform: translate($top-percent, $left-percent);
 }
 
-@mixin animate($name, $duration) {
+@mixin animate($name, $duration, $delay, $fill-mode) {
     -webkit-animation-name: $name;
     -moz-animation-name: $name;
     -o-animation-name: $name;
@@ -22,6 +22,16 @@
     -moz-animation-duration: $duration;
     -o-animation-duration: $duration;
     animation-duration: $duration;
+
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -o-animation-delay: $delay;
+    animation-delay: $delay;
+
+    -webkit-animation-fill-mode: $fill-mode;
+    -moz-animation-fill-mode: $fill-mode;
+    -o-animation-fill-mode: $fill-mode;
+    animation-fill-mode: $fill-mode;
 }
 
 @mixin keyframes($animationName) {
@@ -52,7 +62,7 @@
 // Interate through each div to fade in one by one
 @for $i from 1 through 4 {
     #clockdiv div:nth-child(#{$i}) {
-        @include animate(fadein, ($i*5s))
+        @include animate(fadein, 5s, ($i/1.7)+s, forwards)
     }
 }
 
@@ -65,13 +75,13 @@ body {
 #picture img {
     @include position(50%, 50%, absolute);
     @include translate(-50%, -50%);
-    @include animate(fadein, 8s);
+    @include animate(fadein, 8s, 0s, forwards);
 }
 
 #quote {
     @include position(68%, 50%, absolute);
     @include translate(-50%, 0);
-    @include animate(fadein, 3s);
+    @include animate(fadein, 3s, 0s, forwards);
     color: #9E9E9E;
     white-space: nowrap;
     font-size: 21px;
@@ -91,6 +101,7 @@ body {
         display: inline-block;
         border-radius: 5px;
         box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+        opacity: 0;
     }
 }
 
