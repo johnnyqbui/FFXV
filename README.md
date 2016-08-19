@@ -11,7 +11,7 @@ Click [here](https://johnnyqbui.github.io/FFXV/)
 
 ## Created with:
 
-* AngularJS
-* HowlerJS
-* SASS
-* GulpJS
+* AngularJS - Countdown Timer
+* HowlerJS - Music
+* SASS - Design layout
+* GulpJS - Development Process

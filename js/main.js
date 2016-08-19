@@ -1,11 +1,19 @@
 (function(){
     'use strict'
 
+    // Music
+    var music = new Howl({
+        src: ['mp3/somnus.mp3'],
+        loop: true
+    });
+
+    music.play();
+
     var MainModule = angular.module('AppModule', []);
 
     // Countdown Timer
     MainModule.controller('TimeController', function($scope, $interval) {
-        var deadline = 'September 30 2016';
+        var deadline = 'November 29 2016';
         var t,
             interval;
 
@@ -32,14 +40,5 @@
 
         updateClock();
 
-    });
-
-    // Music
-    var music = new Howl({
-        src: ['mp3/somnus.mp3']
-    });
-
-    music.once('load', function() {
-        music.play();
     });
 })();

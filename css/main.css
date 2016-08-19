@@ -27,40 +27,72 @@
   -moz-animation-name: fadein;
   -o-animation-name: fadein;
   animation-name: fadein;
-  -webkit-animation-duration: 4s;
-  -moz-animation-duration: 4s;
-  -o-animation-duration: 4s;
-  animation-duration: 4s; }
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 0.58824s;
+  -moz-animation-delay: 0.58824s;
+  -o-animation-delay: 0.58824s;
+  animation-delay: 0.58824s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 #clockdiv div:nth-child(2) {
   -webkit-animation-name: fadein;
   -moz-animation-name: fadein;
   -o-animation-name: fadein;
   animation-name: fadein;
-  -webkit-animation-duration: 8s;
-  -moz-animation-duration: 8s;
-  -o-animation-duration: 8s;
-  animation-duration: 8s; }
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 1.17647s;
+  -moz-animation-delay: 1.17647s;
+  -o-animation-delay: 1.17647s;
+  animation-delay: 1.17647s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 #clockdiv div:nth-child(3) {
   -webkit-animation-name: fadein;
   -moz-animation-name: fadein;
   -o-animation-name: fadein;
   animation-name: fadein;
-  -webkit-animation-duration: 12s;
-  -moz-animation-duration: 12s;
-  -o-animation-duration: 12s;
-  animation-duration: 12s; }
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 1.76471s;
+  -moz-animation-delay: 1.76471s;
+  -o-animation-delay: 1.76471s;
+  animation-delay: 1.76471s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 #clockdiv div:nth-child(4) {
   -webkit-animation-name: fadein;
   -moz-animation-name: fadein;
   -o-animation-name: fadein;
   animation-name: fadein;
-  -webkit-animation-duration: 16s;
-  -moz-animation-duration: 16s;
-  -o-animation-duration: 16s;
-  animation-duration: 16s; }
+  -webkit-animation-duration: 5s;
+  -moz-animation-duration: 5s;
+  -o-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-delay: 2.35294s;
+  -moz-animation-delay: 2.35294s;
+  -o-animation-delay: 2.35294s;
+  animation-delay: 2.35294s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 body {
   background: #fff;
@@ -82,7 +114,15 @@ body {
   -webkit-animation-duration: 8s;
   -moz-animation-duration: 8s;
   -o-animation-duration: 8s;
-  animation-duration: 8s; }
+  animation-duration: 8s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
 
 #quote {
   top: 68%;
@@ -100,6 +140,14 @@ body {
   -moz-animation-duration: 3s;
   -o-animation-duration: 3s;
   animation-duration: 3s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   color: #9E9E9E;
   white-space: nowrap;
   font-size: 21px; }
@@ -122,7 +170,8 @@ body {
     padding: 5px 70px 10px 70px;
     display: inline-block;
     border-radius: 5px;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); }
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+    opacity: 0; }
 
 .small {
   font-size: 0.5em;
