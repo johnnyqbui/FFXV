@@ -13,7 +13,7 @@
 
     // Countdown Timer
     MainModule.controller('TimeController', function($scope, $interval) {
-        var deadline = 'September 30 2016';
+        var deadline = 'November 29 2016';
         var t,
             interval;
 
